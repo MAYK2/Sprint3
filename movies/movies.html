@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../Recursos Moviestack/Moviestack_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>Movies</title>
+</head>
+
+<body>
+
+    <body class="bg-black">
+        <header>
+            <div id="contenedor"
+                class="bg-gray-700 border-2 border-white flex w-full my-8 items-center justify-between px-8">
+                <div class="flex items-center">
+                    <img src="../Recursos Moviestack/Moviestack_isotipo.png" class="h-64 w-56 md:w-1/8 mr-4">
+                    <h1><img src="../Recursos Moviestack/Moviestack_logotipo2.png" class=" md:w-96 w-64"></h1>
+                </div>
+                <nav class="flex flex-col gap-5 md:flex-row">
+                    <a href="../index.html" class="uppercase text-white p-3 text-3xl">home</a>
+                    <a href="#" class="uppercase p-3 text-3xl border-2 border-white">movies</a>
+                    <a href="../favorites/favoritas.html" class="uppercase text-white p-3 text-3xl">favs</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div id="imagen" class="flex flex-col justify-center items-center w-11/12">
+                <img src="../Recursos Moviestack/Moviestack_logotipo2.png" class="w-10/12 max-h-60 md:max-h-40 lg:max-h-32 xl:max-h-28 mx-auto">
+                <div class="flex justify-around w-screen">
+                    <select id="select" class="m-3 w-[30%]">
+                        <option>Géneros</option>
+                    </select>
+                    <input id="busqueda" class="m-3 w-[30%]" placeholder="busqueda" type="text">
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div id="contenedor-peliculas" class="flex flex-wrap justify-center py-8">
+
+            </div>
+            <h3 class="text-3xl text-center text-white">MindHub -Cohort N54</>
+        </footer>
+        <script src="./movies.js" type="module"></script>
+    </body>
+
+</html>

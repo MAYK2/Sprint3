@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../Recursos Moviestack/Moviestack_favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+
+<body class="bg-black">
+    <header>
+        <div id="contenedor"
+            class="bg-gray-700 border-2 border-white flex w-full my-8 items-center justify-between px-8">
+            <div class="flex items-center">
+                <img src="../Recursos Moviestack/Moviestack_isotipo.png" class="h-64 w-1/8 mr-4">
+                <h1><img src="../Recursos Moviestack/Moviestack_logotipo2.png" class="w-1/2 md:w-96"></h1>
+            </div>
+            <nav class="flex flex-col gap-5 md:flex-row">
+                <a href="../index.html" class="uppercase text-white p-3 text-3xl">home</a>
+                <a href="../movies/movies.html" class="uppercase p-3 text-3xl text-white ">movies</a>
+                <a href="#" class="uppercase  p-3 text-3xl border-2 border-white">favs</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container mx-auto mt-8" id="movies-container">
+    </div>
+
+    <footer class="text-white text-center py-8">
+        <h3 class="text-3xl text-center text-white pt-5">MindHub -Cohort N54</>
+    </footer>
+    <script src="./favoritas.js"></script>
+</body>
+
+</html>
