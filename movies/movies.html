@@ -17,11 +17,12 @@
 
     <body class="bg-black">
         <header>
-            <div id="contenedor"
-                class="bg-gray-700 border-2 border-white flex w-full my-8 items-center justify-between px-8">
+            <div id="contenedor" class="bg-gray-700 border-2 border-white flex w-full my-8 items-center justify-between px-8">
                 <div class="flex items-center">
-                    <img src="../Recursos Moviestack/Moviestack_isotipo.png" class="h-64 w-56 md:w-1/8 mr-4">
-                    <h1><img src="../Recursos Moviestack/Moviestack_logotipo2.png" class=" md:w-96 w-64"></h1>
+                    <img src="../Recursos Moviestack/Moviestack_isotipo.png" class="h-64 w-56 md:w-1/8 mr-4 object-contain">
+                    <h1 class="hidden md:block"> <!-- Oculta el h1 en dispositivos pequeños -->
+                        <img src="../Recursos Moviestack/Moviestack_logotipo2.png" class="w-full md:max-w-xs object-contain">
+                    </h1>
                 </div>
                 <nav class="flex flex-col gap-5 md:flex-row">
                     <a href="../index.html" class="uppercase text-white p-3 text-3xl">home</a>
@@ -30,7 +31,6 @@
                 </nav>
             </div>
         </header>
-
         <main>
             <div id="imagen" class="flex flex-col justify-center items-center w-11/12">
                 <img src="../Recursos Moviestack/Moviestack_logotipo2.png" class="w-10/12 max-h-60 md:max-h-40 lg:max-h-32 xl:max-h-28 mx-auto">

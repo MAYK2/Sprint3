@@ -1,4 +1,4 @@
-import { crearSelects, inputBusqueda } from "../function.js"; 
+import { agregarFavoritos, crearSelects, inputBusqueda } from "../function.js"; 
 var peliculas;
 fetch('https://moviestack.onrender.com/api/movies',
 {
@@ -9,9 +9,12 @@ fetch('https://moviestack.onrender.com/api/movies',
 .then(res => res.json())
 .then(data => {
    peliculas = data.movies
+   console.log(peliculas);
 crearSelects();
 inputBusqueda(peliculas);
-console.log(peliculas);
+agregarFavoritos()
 })
 .catch(err => console.log(err))
 
+
+    
