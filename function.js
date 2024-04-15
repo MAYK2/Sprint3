@@ -70,25 +70,26 @@ export function inputBusqueda(peliculas) {
     selectGenero.addEventListener('change', filtrarPeliculas);
 }
 
+// <------------- LISTA FAVORITOS ---------------------->
 export let agregarFavoritos = function (){
     const heartButtons = document.querySelectorAll('.heart-button');
     
     heartButtons.forEach(button => {
         button.addEventListener('click', () => {
             const peliculaId = button.dataset.peliculaId;
-            toggleFavorito(peliculaId);
+            alternarFavorito(peliculaId);
             actualizarColorCorazon(button, peliculaId);
         });
     });
 
-    // Verificar y actualizar el color del corazón al cargar la página
+    // Verifica y actualiza el color del corazón al cargar la página
     heartButtons.forEach(button => {
-        const peliculaId = button.dataset.peliculaId;
-        actualizarColorCorazon(button, peliculaId);
+        const verificar = button.dataset.peliculaId;
+        actualizarColorCorazon(button, verificar);
     });
 }
 
-function toggleFavorito(peliculaId) {
+export function alternarFavorito(peliculaId) {
     let favoritos = localStorage.getItem('favoritos') ? JSON.parse(localStorage.getItem('favoritos')) : [];
     const index = favoritos.indexOf(peliculaId);
 
@@ -104,7 +105,7 @@ function toggleFavorito(peliculaId) {
 function actualizarColorCorazon(corazon, peliculaId) {
     let favoritos = localStorage.getItem('favoritos') ? JSON.parse(localStorage.getItem('favoritos')) : [];
     const enFavoritos = favoritos.includes(peliculaId);
-    
+
     if (enFavoritos) {
         corazon.classList.add('text-red-500'); // Agregar color rojo si está en favoritos
     } else {
@@ -113,6 +114,7 @@ function actualizarColorCorazon(corazon, peliculaId) {
 }
 
 
+// <-------------- FIN LISTA FAVORITOS ---------------------->
 export let crearEstructura = function (pelicula) {
     let main = document.getElementById('detalles')
     let div = `<section id="imagenDetalles" class="flex flex-col text-2xl gap-10 my-5">
